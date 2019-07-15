@@ -1,0 +1,19 @@
+<div class="animal">
+  All animals
+  <button onclick={{action "onFindAllAnimals"}}> Find All Animals </button>
+
+  <hr>
+  Add animal
+  {{input
+    value = this.value
+    key-up = (action "getInputValue")
+  }}
+  <button onclick={{action "onSubmit"}}> Submit </button>
+  <button onclick={{action "onReset"}}> Reset </button>
+  {{inputValue}}
+
+  <hr>
+  {{#each this.results as |animal|}}
+    <li> {{animal.name}}</li>
+  {{/each}}
+</div>

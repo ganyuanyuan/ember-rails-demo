@@ -1,0 +1,13 @@
+<h1 class='first'>This is FIRST Page.</h1>
+
+{{#link-to 'home' class="button"}}
+  Home
+{{/link-to}}
+
+<br>
+<hr>
+
+<AnimalBox
+  @onFindAll = {{action 'onFindAll'}}
+  @inputChange = {{action 'onInputChange'}}
+/>
